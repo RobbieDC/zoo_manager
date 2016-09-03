@@ -17,4 +17,16 @@ public class PandaTest {
     assertEquals( "Polly", name );
   }
 
+  @Test
+  public void hasSex() {
+    String sex = panda.getSex();
+    assertEquals( "female", sex );
+  }
+
+  @Test
+  public void hasValue() {
+    double value = panda.getValue();
+    assertEquals( 1000.00, value, 0.001 );
+  }
+
 }
