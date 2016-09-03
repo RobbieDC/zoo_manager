@@ -20,8 +20,16 @@ public abstract class Enclosure {
     return this.occupants;
   }
 
+  public int getNumOccupants() {
+    return this.occupants.size();
+  }
+
   public void setCapacity(int newCapacity) {
     this.capacity = newCapacity;
+  }
+
+  public void assign(Animal animal) {
+    occupants.add(animal);
   }
 
 }

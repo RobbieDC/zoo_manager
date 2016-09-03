@@ -5,10 +5,12 @@ import zoo_manager.*;
 public class BambooForestTest {
 
   BambooForest bambooForest;
+  Panda panda;
 
   @Before
   public void before() {
     bambooForest = new BambooForest( 5 );
+    panda = new Panda( "Peggy", SexType.FEMALE, 900.00 );
   }
 
   @Test
@@ -19,8 +21,14 @@ public class BambooForestTest {
 
   @Test
   public void startsEmpty() {
-    int occupancy = bambooForest.getOccupants().size();
+    int occupancy = bambooForest.getNumOccupants();
     assertEquals( 0, occupancy );
+  }
+
+  @Test
+  public void canAddPanda() {
+    bambooForest.assign( panda );
+    assertEquals( 1, bambooForest.getNumOccupants() );
   }
 
 }
