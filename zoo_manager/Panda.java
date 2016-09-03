@@ -2,7 +2,7 @@ package zoo_manager;
 
 public class Panda extends Animal {
 
-  public Panda(String name, String sex, double value) {
+  public Panda(String name, SexType sex, double value) {
     super(name, sex, value);
   }
 

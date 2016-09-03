@@ -3,10 +3,10 @@ package zoo_manager;
 public abstract class Animal {
 
   String name;
-  String sex;
+  SexType sex;
   double value;
 
-  public Animal( String name, String sex, double value ) {
+  public Animal( String name, SexType sex, double value ) {
     this.name = name;
     this.sex = sex;
     this.value = value;
@@ -16,7 +16,7 @@ public abstract class Animal {
     return this.name;
   };
 
-  public String getSex() {
+  public SexType getSex() {
     return this.sex;
   }
 

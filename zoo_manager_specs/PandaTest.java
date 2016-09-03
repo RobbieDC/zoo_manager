@@ -8,7 +8,7 @@ public class PandaTest {
 
   @Before
   public void befor() {
-    panda = new Panda("Polly", "female", 1000.00);
+    panda = new Panda("Polly", SexType.FEMALE, 1000.00);
   }
 
   @Test
@@ -19,8 +19,8 @@ public class PandaTest {
 
   @Test
   public void hasSex() {
-    String sex = panda.getSex();
-    assertEquals( "female", sex );
+    SexType sex = panda.getSex();
+    assertEquals( SexType.FEMALE, sex );
   }
 
   @Test
