@@ -8,7 +8,7 @@ public class PandaTest {
 
   @Before
   public void befor() {
-    panda = new Panda("Polly");
+    panda = new Panda("Polly", "female", 1000.00);
   }
 
   @Test
