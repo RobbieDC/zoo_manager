@@ -7,7 +7,7 @@ public abstract class Enclosure {
   int capacity;
   ArrayList<Animal> occupants;
 
-  public Enclosure(int capacity, ArrayList<Animal> occupants) {
+  public Enclosure(int capacity) {
     this.capacity = capacity;
     this.occupants = occupants;
   }
@@ -16,7 +16,7 @@ public abstract class Enclosure {
     return this.capacity;
   }
 
-  public int setCapacity(int newCapacity) {
+  public void setCapacity(int newCapacity) {
     this.capacity = newCapacity;
   }
 
