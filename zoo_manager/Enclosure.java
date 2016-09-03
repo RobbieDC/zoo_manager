@@ -9,11 +9,15 @@ public abstract class Enclosure {
 
   public Enclosure(int capacity) {
     this.capacity = capacity;
-    this.occupants = occupants;
+    this.occupants = new ArrayList<Animal>();
   }
 
   public int getCapacity() {
     return this.capacity;
+  }
+
+  public ArrayList<Animal> getOccupants() {
+    return this.occupants;
   }
 
   public void setCapacity(int newCapacity) {

@@ -17,4 +17,10 @@ public class BambooForestTest {
     assertEquals( 5, capacity );
   }
 
+  @Test
+  public void startsEmpty() {
+    int occupancy = bambooForest.getOccupants().size();
+    assertEquals( 0, occupancy );
+  }
+
 }
