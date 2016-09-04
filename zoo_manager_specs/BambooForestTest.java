@@ -31,4 +31,11 @@ public class BambooForestTest {
     assertEquals( 1, bambooForest.getNumOccupants() );
   }
 
+  @Test
+  public void canRemovePanda() {
+    bambooForest.addAnimal( panda );
+    Panda panda = bambooForest.removeAnimal( panda );
+    assertEquals( "Peggy", panda.getName() );
+  }
+
 }

@@ -32,6 +32,11 @@ public abstract class Enclosure {
     occupants.add(animal);
   }
 
+  public Animal removeAnimal(Animal animal) {
+    // Animal removedAnimal = occupants.remove(animal);
+    // return removedAnimal;
+    return occupants.remove(0);
 
+  }
 
 }
