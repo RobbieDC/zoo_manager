@@ -33,8 +33,6 @@ public abstract class Enclosure {
   }
 
   public Animal removeAnimal(Animal animal) {
-    // Animal removedAnimal = occupants.remove(animal);
-    // return removedAnimal;
     int animalIndex = occupants.indexOf(animal);
     return occupants.remove(animalIndex);
   }

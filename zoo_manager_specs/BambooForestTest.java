@@ -13,7 +13,7 @@ public class BambooForestTest {
     bambooForest = new BambooForest( 5 );
     panda_peggy = new Panda( "Peggy", SexType.FEMALE, 900.00 );
     panda_john = new Panda( "John", SexType.MALE, 1500.00 );
-  }
+  } 
 
   @Test
   public void hasCapacity() {
@@ -26,7 +26,7 @@ public class BambooForestTest {
     int occupancy = bambooForest.getNumOccupants();
     assertEquals( 0, occupancy );
   }
-
+ 
   @Test
   public void canAddPanda() {
     bambooForest.addAnimal( panda_peggy );
