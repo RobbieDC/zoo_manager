@@ -1,24 +1,43 @@
-// import static org.junit.Assert.*;
-// import org.junit.*;
-// import zoo_manager.*;
+import static org.junit.Assert.*;
+import org.junit.*;
+import zoo_manager.*;
 
-// public class ArcticTest {
+public class ArcticTest {
 
-//   Arctic arctic;
-//   PolarBear polar_pablo;
-//   PolarBear polar
+  Arctic arctic;
+  PolarBear polarPablo;
+  PolarBear polarPabla;
 
-// }
+  @Before
+  public void before() {
+    arctic = new Arctic( 5 );
+    polarPablo = new PolarBear("Pablo", SexType.MALE, 1800.00);
+    polarPabla = new PolarBear("Pabla", SexType.FEMALE, 2100.00);
+  }
 
-// public class BambooForestTest {
+  @Test
+  public void hasCapacity() {
+    assertEquals( 5, arctic.getCapacity() );
+  }
 
-//   BambooForest bambooForest;
-//   Panda panda_peggy;
-//   Panda panda_john;
+  @Test
+  public void startsEmpty() {
+    int occupancy = arctic.getNumOccupants();
+    assertEquals( 0, occupancy );
+  }
+  
+  @Test
+  public void canAddPanda() {
+    arctic.addAnimal( polarPabla );
+    assertEquals( 1, arctic.getNumOccupants() );
+  }
 
-//   @Before
-//   public void before() {
-//     bambooForest = new BambooForest( 5 );
-//     panda_peggy = new Panda( "Peggy", SexType.FEMALE, 900.00 );
-//     panda_john = new Panda( "John", SexType.MALE, 1500.00 );
-//   } 
+  @Test
+  public void canRemovePanda() {
+    arctic.addAnimal( polarPablo );
+    arctic.addAnimal( polarPabla );
+    Animal removedAnimal = arctic.removeAnimal( polarPabla );
+    assertEquals( "Pabla", removedAnimal.getName() );
+  }
+
+}
