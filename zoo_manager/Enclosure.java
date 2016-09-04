@@ -28,8 +28,10 @@ public abstract class Enclosure {
     this.capacity = newCapacity;
   }
 
-  public void assign(Animal animal) {
+  public void addAnimal(Animal animal) {
     occupants.add(animal);
   }
+
+
 
 }

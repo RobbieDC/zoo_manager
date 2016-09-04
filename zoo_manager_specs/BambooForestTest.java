@@ -27,7 +27,7 @@ public class BambooForestTest {
 
   @Test
   public void canAddPanda() {
-    bambooForest.assign( panda );
+    bambooForest.addAnimal( panda );
     assertEquals( 1, bambooForest.getNumOccupants() );
   }
 
