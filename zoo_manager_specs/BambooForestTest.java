@@ -5,14 +5,14 @@ import zoo_manager.*;
 public class BambooForestTest {
 
   BambooForest bambooForest;
-  Panda panda_peggy;
-  Panda panda_john;
+  Panda pandaPeggy;
+  Panda pandaJohn;
 
   @Before
   public void before() {
     bambooForest = new BambooForest( 5 );
-    panda_peggy = new Panda( "Peggy", SexType.FEMALE, 900.00 );
-    panda_john = new Panda( "John", SexType.MALE, 1500.00 );
+    pandaPeggy = new Panda( "Peggy", SexType.FEMALE, 900.00 );
+    pandaJohn = new Panda( "John", SexType.MALE, 1500.00 );
   } 
 
   @Test
@@ -29,15 +29,15 @@ public class BambooForestTest {
  
   @Test
   public void canAddPanda() {
-    bambooForest.addAnimal( panda_peggy );
+    bambooForest.addAnimal( pandaPeggy );
     assertEquals( 1, bambooForest.getNumOccupants() );
   }
 
   @Test
   public void canRemovePanda() {
-    bambooForest.addAnimal( panda_peggy );
-    bambooForest.addAnimal( panda_john );
-    Animal removedPanda = bambooForest.removeAnimal( panda_john );
+    bambooForest.addAnimal( pandaPeggy );
+    bambooForest.addAnimal( pandaJohn );
+    Animal removedPanda = bambooForest.removeAnimal( pandaJohn );
     assertEquals( "John", removedPanda.getName() );
   }
 
