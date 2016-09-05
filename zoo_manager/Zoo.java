@@ -11,7 +11,7 @@ public class Zoo {
   }
 
   public ArrayList<Enclosure> getEnclosures() {
-    
+    return this.enclosures;
   }
 
 }
