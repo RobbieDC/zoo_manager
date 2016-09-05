@@ -32,6 +32,8 @@ public class ZooKeeper {
     ArrayList<Enclosure> enclosures = zoo.getEnclosures();
     int enclosureIndex = enclosures.indexOf(enclosure);
     return enclosures.get(enclosureIndex);
-  } 
+  }
+
+  
 
 }

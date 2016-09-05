@@ -9,6 +9,7 @@ public class ZooKeeperTest {
   ZooKeeper zooKeeper;
   Enclosure arctic;
   Enclosure bambooForest;
+  Animal panda;
 
   @Before
   public void before() {
@@ -16,6 +17,7 @@ public class ZooKeeperTest {
     zooKeeper = new ZooKeeper("Raoul", zoo);
     arctic = new Arctic( 5 );
     bambooForest = new BambooForest( 7 );
+    panda = new Panda("Polly", SexType.FEMALE, 1000.00);
   }
 
   @Test
@@ -45,6 +47,15 @@ public class ZooKeeperTest {
     zooKeeper.addEnclosure(bambooForest);
     Enclosure specifiedEnclosure = zooKeeper.getEnclosure( arctic );
     assertEquals( arctic, specifiedEnclosure );
+  }
+
+  @Test
+  public void canAddAnimalToEnclosure() {
+    zooKeeper.addEnclosure(arctic);
+    zooKeeper.addEnclosure(bambooForest);
+    Enclosure specifiedEnclosure = zooKeeper.getEnclosure( bambooForest );
+    zooKeeper.addAnimalToenclosure( panda, bambooForest );
+    assertEquals()
   }
 
 }
