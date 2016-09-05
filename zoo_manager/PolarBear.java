@@ -1,6 +1,8 @@
 package zoo_manager;
 
-public class PolarBear extends Animal {
+import behaviours.*;
+
+public class PolarBear extends Animal implements Arcticable {
 
   public PolarBear(String name, SexType sex, Double value) {
     super(name, sex, value);
