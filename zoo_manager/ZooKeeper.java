@@ -1,5 +1,7 @@
 package zoo_manager;
 
+import java.util.*;
+
 public class ZooKeeper {
 
   String name;
@@ -16,6 +18,15 @@ public class ZooKeeper {
 
   public Zoo getZoo() {
     return this.zoo;
+  }
+
+  public int getNumEnclosures() {
+    return zoo.getEnclosures().size();
+  }
+
+  public ArrayList<Enclosure> getEnclosure( Enclosure enclosure ) {
+    ArrayList<Enclosure> enclosures = zoo.getEnclosures();
+    return enclosures;
   }
 
 }
