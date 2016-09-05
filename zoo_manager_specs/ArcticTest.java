@@ -1,6 +1,7 @@
 import static org.junit.Assert.*;
 import org.junit.*;
 import zoo_manager.*;
+import behaviours.*;
 
 public class ArcticTest {
 
@@ -36,8 +37,9 @@ public class ArcticTest {
   public void canRemovePanda() {
     arctic.addAnimal( polarPablo );
     arctic.addAnimal( polarPabla );
-    Animal removedAnimal = arctic.removeAnimal( polarPabla );
-    assertEquals( "Pabla", removedAnimal.getName() );
+    Arcticable removedArcticable = arctic.removeAnimal( polarPabla );
+    PolarBear original = (PolarBear) removedArcticable;
+    assertEquals( "Pabla", original.getName() );
   }
 
 }

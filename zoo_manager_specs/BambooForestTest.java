@@ -1,6 +1,7 @@
 import static org.junit.Assert.*;
 import org.junit.*;
 import zoo_manager.*;
+import behaviours.*;
 
 public class BambooForestTest {
 
@@ -37,8 +38,9 @@ public class BambooForestTest {
   public void canRemovePanda() {
     bambooForest.addAnimal( pandaPeggy );
     bambooForest.addAnimal( pandaJohn );
-    Animal removedPanda = bambooForest.removeAnimal( pandaJohn );
-    assertEquals( "John", removedPanda.getName() );
+    BambooForestable removedBambooForestable = bambooForest.removeAnimal( pandaJohn );
+    Panda original = (Panda) removedBambooForestable;
+    assertEquals( "John", original.getName() );
   }
 
 }
