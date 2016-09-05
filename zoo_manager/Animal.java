@@ -14,7 +14,7 @@ public abstract class Animal {
 
   public String getName() {
     return this.name;
-  };
+  }
 
   public SexType getSex() {
     return this.sex;
