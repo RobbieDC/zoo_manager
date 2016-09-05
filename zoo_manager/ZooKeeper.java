@@ -34,6 +34,8 @@ public class ZooKeeper {
     return enclosures.get(enclosureIndex);
   }
 
-  
+  public void addAnimalToEnclosure( Animal animal, Enclosure enclosure ) {
+
+  }
 
 }
