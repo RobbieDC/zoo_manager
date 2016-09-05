@@ -24,9 +24,8 @@ public class ZooKeeper {
     return zoo.getEnclosures().size();
   }
 
-  public ArrayList<Enclosure> getEnclosure( Enclosure enclosure ) {
-    ArrayList<Enclosure> enclosures = zoo.getEnclosures();
-    return enclosures;
+  public void addEnclosure( Enclosure enclosure ) {
+    zoo.getEnclosures().add( enclosure );
   }
 
 }

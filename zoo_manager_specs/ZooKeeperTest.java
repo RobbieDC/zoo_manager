@@ -8,12 +8,14 @@ public class ZooKeeperTest {
   Zoo zoo;
   ZooKeeper zooKeeper;
   Enclosure arctic;
+  Enclosure bambooForest;
 
   @Before
   public void before() {
     zoo = new Zoo();
     zooKeeper = new ZooKeeper("Raoul", zoo);
     arctic = new Arctic( 5 );
+    bambooForest = new BambooForest( 7 );
   }
 
   @Test
@@ -31,20 +33,18 @@ public class ZooKeeperTest {
     assertEquals( 0, zooKeeper.getNumEnclosures() );
   }
 
-  // @Test
-  // public void canAddEnclosure() {
-  //   assertEquals(1, )
-  // }
+  @Test
+  public void canAddEnclosure() {
+    zooKeeper.addEnclosure(arctic);
+    assertEquals( 1, zooKeeper.getNumEnclosures() );
+  }
 
-  // @Test
-  // public void canGetEnclosure() {
-  //   assertEquals( arctic, zooKeeper.getEnclosure( arctic ) );
-  // }
-
-  // @Test
-  // public void canAddEnclosuresToZoo() {
-  //   ArrayList<Enclosures> enclosures = zoo.getEnclosures();
-  //   assertEquals(  );
-  // }
+  @Test
+  public void canGetEnclosure() {
+    zooKeeper.addEnclosure(arctic);
+    zooKeeper.addEnclosure(bambooForest);
+    Enclosure specifiedEnclosure = zooKeeper.getEnclosure( arctic );
+    assertEquals( arctic, specifiedEnclosure );
+  }
 
 }
