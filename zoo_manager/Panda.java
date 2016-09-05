@@ -1,6 +1,8 @@
 package zoo_manager;
 
-public class Panda extends Animal {
+import behaviours.*;
+
+public class Panda extends Animal implements BambooForestable {
 
   public Panda(String name, SexType sex, double value) {
     super(name, sex, value);
