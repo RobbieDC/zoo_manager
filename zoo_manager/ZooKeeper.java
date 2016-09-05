@@ -28,4 +28,10 @@ public class ZooKeeper {
     zoo.getEnclosures().add( enclosure );
   }
 
+  public Enclosure getEnclosure( Enclosure enclosure ) {
+    ArrayList<Enclosure> enclosures = zoo.getEnclosures();
+    int enclosureIndex = enclosures.indexOf(enclosure);
+    return enclosures.get(enclosureIndex);
+  } 
+
 }
