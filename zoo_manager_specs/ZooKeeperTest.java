@@ -54,8 +54,9 @@ public class ZooKeeperTest {
     zooKeeper.addEnclosure(arctic);
     zooKeeper.addEnclosure(bambooForest);
     Enclosure specifiedEnclosure = zooKeeper.getEnclosure( bambooForest );
-    zooKeeper.addAnimalToenclosure( panda, bambooForest );
-    assertEquals()
+    zooKeeper.addAnimalToenclosure( panda, specifiedEnclosure );
+    BambooForest bambooForestWithAnimal = (BambooForest) specifiedEnclosure
+    assertEquals( 1, bambooForestWithAnimal.getNumOccupants() );
   }
 
 }
