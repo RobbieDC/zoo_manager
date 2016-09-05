@@ -24,7 +24,7 @@ public abstract class Enclosure {
   // NOT DRY
 
   // public ArrayList<Animal> getOccupants() {
-  //   return new ArrayList<Animal>(this.occupants);
+  //   return this.occupants;
   // }
 
   // public int getNumOccupants() {
