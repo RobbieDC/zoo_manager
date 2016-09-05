@@ -10,8 +10,12 @@ public class Zoo {
     this.enclosures = new ArrayList<Enclosure>();
   }
 
-  public int numEnclosures() {
-    return enclosures.size();
-  }
+  // public int numEnclosures() {
+  //   return enclosures.size();
+  // }
+
+  // public void addEnclosurre() {
+    
+  // }
 
 }
