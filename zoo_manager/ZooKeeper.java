@@ -43,4 +43,12 @@ public class ZooKeeper {
     arctic.addAnimal(animal);
   }
 
+  public BambooForestable removeAnimalFromBambooForest( BambooForestable animal, BambooForest bambooForest ) {
+    return bambooForest.removeAnimal( animal );
+  }
+
+  public Arcticable removeAnimalFromArctic( Arcticable animal, Arctic arctic ) {
+    return arctic.removeAnimal( animal );
+  }
+
 }

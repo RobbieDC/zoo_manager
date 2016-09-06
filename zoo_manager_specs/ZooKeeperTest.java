@@ -19,6 +19,7 @@ public class ZooKeeperTest {
     arctic = new Arctic( 5 );
     bambooForest = new BambooForest( 7 );
     panda = new Panda("Polly", SexType.FEMALE, 1000.00);
+    polarBear = new PolarBear("Pablo", SexType.MALE, 1300.00);
   }
 
   @Test
@@ -50,16 +51,6 @@ public class ZooKeeperTest {
     assertEquals( arctic, specifiedEnclosure );
   }
 
-  // @Test
-  // public void canAddAnimalToEnclosure() {
-  //   zooKeeper.addEnclosure(arctic);
-  //   zooKeeper.addEnclosure(bambooForest);
-  //   Enclosure specifiedEnclosure = zooKeeper.getEnclosure( bambooForest );
-  //   zooKeeper.addAnimalToBambooForest( panda, specifiedEnclosure );
-  //   BambooForest bambooForestWithAnimal = (BambooForest) specifiedEnclosure;
-  //   assertEquals( 1, bambooForestWithAnimal.getNumOccupants() );
-  // }
-
   @Test
   public void canAddAnimalToBambooForest() {
     zooKeeper.addEnclosure(bambooForest);
@@ -72,6 +63,26 @@ public class ZooKeeperTest {
     zooKeeper.addEnclosure(arctic);
     zooKeeper.addAnimalToArctic( polarBear, arctic );
     assertEquals(1, arctic.getNumOccupants() );
+  }
+
+  @Test
+  public void canRemoveAnimalFromBambooForest() {
+    zooKeeper.addEnclosure( bambooForest );
+    zooKeeper.addAnimalToBambooForest( panda, bambooForest );
+    BambooForestable removedPanda = zooKeeper.removeAnimalFromBambooForest( panda, bambooForest );
+    Panda original = (Panda) removedPanda;
+    String removedPandaName = original.getName();
+    assertEquals( "Polly", removedPandaName );
+  }
+
+  @Test
+  public void canRemoveAnimalFromArctic() {
+    zooKeeper.addEnclosure( arctic );
+    zooKeeper.addAnimalToArctic( polarBear, arctic );
+    Arcticable removedPolarBear = zooKeeper.removeAnimalFromArctic( polarBear, arctic );
+    PolarBear original = (PolarBear) removedPolarBear;
+    String removedPolarBearName = original.getName();
+    assertEquals( "Pablo", removedPolarBearName );
   }
 
 }

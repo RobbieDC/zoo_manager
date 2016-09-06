@@ -33,13 +33,13 @@ public class ArcticTest {
   }
   
   @Test
-  public void canAddPanda() {
+  public void canAddPolarBear() {
     arctic.addAnimal( polarPabla );
     assertEquals( 1, arctic.getNumOccupants() );
   }
 
   @Test
-  public void canRemovePanda() {
+  public void canRemovePolarBear() {
     arctic.addAnimal( polarPablo );
     arctic.addAnimal( polarPabla );
     Arcticable removedArcticable = arctic.removeAnimal( polarPabla );
