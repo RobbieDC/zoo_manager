@@ -1,6 +1,7 @@
 import static org.junit.Assert.*;
 import org.junit.*;
 import zoo_manager.*;
+// import behaviours.*;
 
 public class PolarBearTest {
 
@@ -24,6 +25,11 @@ public class PolarBearTest {
   @Test
   public void hasValue() {
     assertEquals( 2000.00, polarBear.getValue(), 0.001 );
+  }
+
+  @Test
+  public void bellyStartsEmpty() {
+    assertEquals( 0, polarBear.foodCount() );
   }
 
 }

@@ -1,15 +1,20 @@
 package zoo_manager;
 
+import java.util.*;
+import behaviours.*;
+
 public abstract class Animal {
 
   String name;
   SexType sex;
   double value;
+  ArrayList<Edible> belly;
 
   public Animal( String name, SexType sex, double value ) {
     this.name = name;
     this.sex = sex;
     this.value = value;
+    this.belly = new ArrayList<Edible>();
   }
 
   public String getName() {
@@ -26,6 +31,10 @@ public abstract class Animal {
 
   public void setValue( double newValue ) {
     this.value = newValue;
+  }
+
+  public int foodCount() {
+    return belly.size();
   }
 
 }

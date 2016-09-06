@@ -1,6 +1,7 @@
 import static org.junit.Assert.*;
 import org.junit.*;
 import zoo_manager.*;
+// import behaviours.*;
 
 public class PandaTest {
 
@@ -27,6 +28,11 @@ public class PandaTest {
   public void hasValue() {
     double value = panda.getValue();
     assertEquals( 1000.00, value, 0.001 );
+  }
+
+  @Test
+  public void bellyStartsEmpty() {
+    assertEquals( 0, panda.foodCount() );
   }
 
 }
