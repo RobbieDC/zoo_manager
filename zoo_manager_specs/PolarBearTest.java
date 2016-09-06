@@ -1,15 +1,17 @@
 import static org.junit.Assert.*;
 import org.junit.*;
 import zoo_manager.*;
-// import behaviours.*;
+import behaviours.*;
 
 public class PolarBearTest {
 
   PolarBear polarBear;
+  Edible burrito;
 
   @Before
   public void before() {
     polarBear = new PolarBear( "Peter", SexType.MALE, 2000.00 );
+    burrito = new Burrito();
   }
 
   @Test
@@ -30,6 +32,12 @@ public class PolarBearTest {
   @Test
   public void bellyStartsEmpty() {
     assertEquals( 0, polarBear.foodCount() );
+  }
+
+  @Test
+  public void canEatBurrito() {
+    polarBear.eat(burrito);
+    assertEquals( 1, polarBear.foodCount() );
   }
 
 }

@@ -1,15 +1,17 @@
 import static org.junit.Assert.*;
 import org.junit.*;
 import zoo_manager.*;
-// import behaviours.*;
+import behaviours.*;
 
 public class PandaTest {
 
   Panda panda;
+  Edible burrito;
 
   @Before
   public void befor() {
     panda = new Panda("Polly", SexType.FEMALE, 1000.00);
+    burrito = new Burrito();
   }
 
   @Test
@@ -33,6 +35,12 @@ public class PandaTest {
   @Test
   public void bellyStartsEmpty() {
     assertEquals( 0, panda.foodCount() );
+  }
+
+  @Test
+  public void canEatBurrito() {
+    panda.eat(burrito);
+    assertEquals( 1, panda.foodCount() );
   }
 
 }
