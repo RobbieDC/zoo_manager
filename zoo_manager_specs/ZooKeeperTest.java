@@ -1,15 +1,17 @@
 import static org.junit.Assert.*;
 import org.junit.*;
 import zoo_manager.*;
+import behaviours.*;
 // import java.util.*;
 
 public class ZooKeeperTest {
 
   Zoo zoo;
   ZooKeeper zooKeeper;
-  Enclosure arctic;
-  Enclosure bambooForest;
-  Animal panda;
+  Arctic arctic;
+  BambooForest bambooForest;
+  BambooForestable panda;
+  Arcticable polarBear;
 
   @Before
   public void before() {
@@ -49,14 +51,28 @@ public class ZooKeeperTest {
     assertEquals( arctic, specifiedEnclosure );
   }
 
+  // @Test
+  // public void canAddAnimalToEnclosure() {
+  //   zooKeeper.addEnclosure(arctic);
+  //   zooKeeper.addEnclosure(bambooForest);
+  //   Enclosure specifiedEnclosure = zooKeeper.getEnclosure( bambooForest );
+  //   zooKeeper.addAnimalToBambooForest( panda, specifiedEnclosure );
+  //   BambooForest bambooForestWithAnimal = (BambooForest) specifiedEnclosure;
+  //   assertEquals( 1, bambooForestWithAnimal.getNumOccupants() );
+  // }
+
   @Test
-  public void canAddAnimalToEnclosure() {
-    zooKeeper.addEnclosure(arctic);
+  public void canAddAnimalToBambooForest() {
     zooKeeper.addEnclosure(bambooForest);
-    Enclosure specifiedEnclosure = zooKeeper.getEnclosure( bambooForest );
-    zooKeeper.addAnimalToEnclosure( panda, specifiedEnclosure );
-    BambooForest bambooForestWithAnimal = (BambooForest) specifiedEnclosure;
-    assertEquals( 1, bambooForestWithAnimal.getNumOccupants() );
+    zooKeeper.addAnimalToBambooForest( panda, bambooForest );
+    assertEquals(1, bambooForest.getNumOccupants() );
+  }
+
+  @Test
+  public void canAddAnimalToArctic() {
+    zooKeeper.addEnclosure(arctic);
+    zooKeeper.addAnimalToArctic( polarBear, arctic );
+    assertEquals(1, arctic.getNumOccupants() );
   }
 
 }

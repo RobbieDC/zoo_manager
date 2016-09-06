@@ -1,6 +1,7 @@
 package zoo_manager;
 
 import java.util.*;
+import behaviours.*;
 
 public class ZooKeeper {
 
@@ -34,8 +35,12 @@ public class ZooKeeper {
     return enclosures.get(enclosureIndex);
   }
 
-  public void addAnimalToEnclosure( Animal animal, Enclosure enclosure ) {
+  public void addAnimalToBambooForest( BambooForestable animal, BambooForest bambooForest ) {
+    bambooForest.addAnimal(animal);
+  }
 
+  public void addAnimalToArctic( Arcticable animal, Arctic arctic ) {
+    arctic.addAnimal(animal);
   }
 
 }
