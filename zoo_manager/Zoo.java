@@ -1,6 +1,7 @@
 package zoo_manager;
 
 import java.util.*;
+import behaviours.*;
 
 public class Zoo {
 
