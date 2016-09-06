@@ -11,7 +11,7 @@ public abstract class Enclosure {
 
   public Enclosure(int capacity) {
     this.capacity = capacity;
-    this.food = food;
+    this.food = new ArrayList<Edible>();
     // this.occupants = new ArrayList<Animal>();
   }
 
@@ -25,10 +25,6 @@ public abstract class Enclosure {
 
   public ArrayList<Edible> getFood() {
     return this.food;
-  }
-
-  public void addFood(Edible edible) {
-    food.add(edible);
   }
 
   // The following methods have been transferred to concrete classes of enclosure

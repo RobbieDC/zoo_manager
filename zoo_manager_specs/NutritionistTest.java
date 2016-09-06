@@ -31,11 +31,11 @@ public class NutritionistTest {
     assertEquals( 1, zooKeeper.getNumEnclosures() );
   }
 
-  // @Test
-  // public void canAddFoodToBambooForest() {
-  //   nutritionist.addFoodToEnclosure( burrito, bambooForest );
-  //   int amountOfFood = zooKeeper.getEnclosure( bambooForest ).getFood().size();
-  //   assertEquals( 1,  amountOfFood );
-  // }
+  @Test
+  public void canAddFoodToBambooForest() {
+    nutritionist.addFoodToEnclosure( burrito, bambooForest );
+    int amountOfFood = zooKeeper.getEnclosure( bambooForest ).getFood().size();
+    assertEquals( 1,  amountOfFood );
+  }
 
 }
