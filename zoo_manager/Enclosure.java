@@ -27,6 +27,10 @@ public abstract class Enclosure {
     return this.food;
   }
 
+  public void addFood(Edible edible) {
+    food.add(edible);
+  }
+
   // The following methods have been transferred to concrete classes of enclosure
   // NOT DRY
 

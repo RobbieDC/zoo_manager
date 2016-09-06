@@ -1,5 +1,8 @@
 package zoo_manager;
 
+import java.util.*;
+import behaviours.*;
+
 public class Nutritionist {
 
   String name;
@@ -12,6 +15,15 @@ public class Nutritionist {
 
   public String getName() {
     return this.name;
+  }
+
+  public void addFoodToEnclosure(Edible burrito, Enclosure enclosure) {
+    // ArrayList<Edible> foodStore = new ArrayList<Edible>();
+    // System.out.println("burrito: " + burrito);
+    // System.out.println("enclosure: " + enclosure);
+    // System.out.println("enclosure.getfood(): " + enclosure.getFood());
+    ArrayList<Edible> foodStore = enclosure.getFood();
+    foodStore.add(burrito);
   }
 
 }
