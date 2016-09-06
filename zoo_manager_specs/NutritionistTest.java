@@ -9,6 +9,7 @@ public class NutritionistTest {
   Nutritionist nutritionist;
   ZooKeeper zooKeeper;
   Enclosure bambooForest;
+  Enclosure arctic;
   Burrito burrito;
 
   @Before
@@ -17,6 +18,7 @@ public class NutritionistTest {
     nutritionist = new Nutritionist("Charley", zoo);
     zooKeeper = new ZooKeeper( "Kat", zoo );
     bambooForest = new BambooForest( 7 );
+    arctic = new Arctic( 5 );
     zooKeeper.addEnclosure(bambooForest);
     burrito = new Burrito();
   }
@@ -36,6 +38,13 @@ public class NutritionistTest {
     nutritionist.addFoodToEnclosure( burrito, bambooForest );
     int amountOfFood = zooKeeper.getEnclosure( bambooForest ).getFood().size();
     assertEquals( 1,  amountOfFood );
+  }
+
+  @Test
+  public void canAddFoodtoArctic() {
+    nutritionist.addFoodToEnclosure( burrito, arctic )
+    int amountOfFood = zooKeeper.getEnclosure( arctic ).getFood().size();
+    assertEquals( 1, amountOfFood );
   }
 
 }

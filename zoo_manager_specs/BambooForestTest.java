@@ -27,8 +27,6 @@ public class BambooForestTest {
     assertEquals( 0, bambooForest.getFood().size() );
   }
 
-
-
   @Test
   public void startsEmpty() {
     int occupancy = bambooForest.getNumOccupants();
