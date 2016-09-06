@@ -18,11 +18,7 @@ public class Nutritionist {
   }
 
   public void addFoodToEnclosure(Edible burrito, Enclosure enclosure) {
-    // ArrayList<Edible> foodStore = new ArrayList<Edible>();
-    // System.out.println("burrito: " + burrito);
-    // System.out.println("enclosure: " + enclosure);
-    // System.out.println("enclosure.getfood(): " + enclosure.getFood());
-    ArrayList<Edible> foodStore = enclosure.getFood();
+    ArrayList<Edible> foodStore = enclosure.getFoodStore();
     foodStore.add(burrito);
   }
 

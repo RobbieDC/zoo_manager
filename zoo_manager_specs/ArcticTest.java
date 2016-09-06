@@ -23,7 +23,7 @@ public class ArcticTest {
 
   @Test
   public void hasEmptyFoodArray() {
-    assertEquals( 0, arctic.getFood().size() );
+    assertEquals( 0, arctic.getFoodStore().size() );
   }
 
   @Test

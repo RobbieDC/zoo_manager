@@ -24,7 +24,7 @@ public class BambooForestTest {
 
   @Test
   public void hasEmptyFoodArray() {
-    assertEquals( 0, bambooForest.getFood().size() );
+    assertEquals( 0, bambooForest.getFoodStore().size() );
   }
 
   @Test

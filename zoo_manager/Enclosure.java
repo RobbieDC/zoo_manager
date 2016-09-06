@@ -6,12 +6,12 @@ import behaviours.*;
 public abstract class Enclosure {
 
   int capacity;
-  ArrayList<Edible> food;
+  ArrayList<Edible> foodStore;
   // ArrayList<Animal> occupants;
 
   public Enclosure(int capacity) {
     this.capacity = capacity;
-    this.food = new ArrayList<Edible>();
+    this.foodStore = new ArrayList<Edible>();
     // this.occupants = new ArrayList<Animal>();
   }
 
@@ -23,8 +23,8 @@ public abstract class Enclosure {
     this.capacity = newCapacity;
   }
 
-  public ArrayList<Edible> getFood() {
-    return this.food;
+  public ArrayList<Edible> getFoodStore() {
+    return this.foodStore;
   }
 
   // The following methods have been transferred to concrete classes of enclosure

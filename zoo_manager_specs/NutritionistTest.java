@@ -20,6 +20,7 @@ public class NutritionistTest {
     bambooForest = new BambooForest( 7 );
     arctic = new Arctic( 5 );
     zooKeeper.addEnclosure(bambooForest);
+    zooKeeper.addEnclosure(arctic);
     burrito = new Burrito();
   }
 
@@ -30,20 +31,21 @@ public class NutritionistTest {
 
   @Test
   public void zooHasEnclosure() {
-    assertEquals( 1, zooKeeper.getNumEnclosures() );
+    assertEquals( 2, zooKeeper.getNumEnclosures() );
   }
 
   @Test
   public void canAddFoodToBambooForest() {
     nutritionist.addFoodToEnclosure( burrito, bambooForest );
-    int amountOfFood = zooKeeper.getEnclosure( bambooForest ).getFood().size();
+    int amountOfFood = bambooForest.getFoodStore().size();
     assertEquals( 1,  amountOfFood );
   }
 
   @Test
   public void canAddFoodtoArctic() {
-    nutritionist.addFoodToEnclosure( burrito, arctic )
-    int amountOfFood = zooKeeper.getEnclosure( arctic ).getFood().size();
+    System.out.println(arctic.getFoodStore());
+    nutritionist.addFoodToEnclosure( burrito, arctic );
+    int amountOfFood = arctic.getFoodStore().size();
     assertEquals( 1, amountOfFood );
   }
 
