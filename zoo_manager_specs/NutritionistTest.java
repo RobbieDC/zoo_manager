@@ -43,7 +43,6 @@ public class NutritionistTest {
 
   @Test
   public void canAddFoodtoArctic() {
-    System.out.println(arctic.getFoodStore());
     nutritionist.addFoodToEnclosure( burrito, arctic );
     int amountOfFood = arctic.getFoodStore().size();
     assertEquals( 1, amountOfFood );
