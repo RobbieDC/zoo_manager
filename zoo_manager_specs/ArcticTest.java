@@ -21,6 +21,10 @@ public class ArcticTest {
     assertEquals( 5, arctic.getCapacity() );
   }
 
+  public void hasEmptyFoodArray() {
+    assertEquals( 0, arctic.getFood().size() );
+  }
+
   @Test
   public void startsEmpty() {
     int occupancy = arctic.getNumOccupants();

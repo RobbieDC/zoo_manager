@@ -1,14 +1,17 @@
 package zoo_manager;
 
 import java.util.*;
+import behaviours.*;
 
 public abstract class Enclosure {
 
   int capacity;
+  ArrayList<Edible> food;
   // ArrayList<Animal> occupants;
 
   public Enclosure(int capacity) {
     this.capacity = capacity;
+    this.food = food;
     // this.occupants = new ArrayList<Animal>();
   }
 
@@ -18,6 +21,10 @@ public abstract class Enclosure {
 
   public void setCapacity(int newCapacity) {
     this.capacity = newCapacity;
+  }
+
+  public ArrayList<Edible> getFood() {
+    return this.food;
   }
 
   // The following methods have been transferred to concrete classes of enclosure
