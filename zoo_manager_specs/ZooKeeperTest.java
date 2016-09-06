@@ -2,7 +2,6 @@ import static org.junit.Assert.*;
 import org.junit.*;
 import zoo_manager.*;
 import behaviours.*;
-// import java.util.*;
 
 public class ZooKeeperTest {
 
