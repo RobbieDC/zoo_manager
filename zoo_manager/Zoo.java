@@ -5,9 +5,11 @@ import java.util.*;
 public class Zoo {
 
   ArrayList<Enclosure> enclosures;
+  ArrayList<Edible> edibles;
 
   public Zoo() {
     this.enclosures = new ArrayList<Enclosure>();
+    this.edibles = new ArrayList<Edible>();
   }
 
   public ArrayList<Enclosure> getEnclosures() {
